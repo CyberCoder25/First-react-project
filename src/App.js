@@ -1,32 +1,50 @@
-import Home from "./components/Home";
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import Login from "./components/Login";
-import Logout from "./components/Logout";
-import Notfound from "./components/Notfound";
-import PostJson from "./components/PostJson";
-import SinglePosts from "./components/SinglePosts";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { AuthProvider, useAuth } from "./context/AuthContext"
+import Login from "./components/Login"
+import Logout from "./components/Logout"
+import Home from "./components/Home"
+import SinglePosts from "./components/SinglePosts"
+import Notfound from "./components/Notfound"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+ 
+function AppContent(){
+  const {user}=useAuth()
+  
+  if (!user) {
+    return (
+ <>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Login/>} />
+          <Route path="*" element={<Notfound/>} />
+        </Routes>
+      </>
+    )
+  }
 
+  return (
+    <>
+    <Header/>
+      <Routes>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/posts/:id" element={<SinglePosts/>}/>
+        <Route path="/logout" element={<Logout/>}/>
+        <Route path="*" element={<Notfound/>}/>
+      </Routes>
+        <Footer/>
+    </>
+  )
+}
 
 function App() {
   return (
+    <AuthProvider>
     <BrowserRouter>
-      <div className="App">
-        <NavLink to="/home">Home</NavLink>
-        <NavLink to="/login">Log In</NavLink>
-        <NavLink to="/logout">Log Out</NavLink>
-        <NavLink to="/posts">Posts</NavLink>
-        <Routes>
-          {/* /-ის გამო ის იქნება მთავარ ადგილზე */}
-          <Route path="/home" element={<Home/>}/>
-          <Route path="/login" element={<Login/>}/>
-          <Route path="/logout" element={<Logout/>}/>
-          <Route path="/posts" element={<PostJson/>}/>
-          <Route path="/posts/:id" element={<SinglePosts/>}/>
-          <Route path="*" element={<Notfound/>}/>
-        </Routes>
-      </div>
+    <AppContent/>
     </BrowserRouter>
-  );
+    </AuthProvider>
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,271 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+
+body{
+  margin: 0;
+  font-family: 'extrasquare', sans-serif;
+  background-color: #fff;
+  color: #54595F;
+}
+
+
+.container{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+h1, h2, h3, h4, h5{
+  color:#54595F;
+}
+
+
+p, span, li, input, button{
+  font-size: 16px;
+  color: #54595F;
+}
+
+
+.navLinksWrapper{
+  width: 55%;
+  height: 100%;
+  margin-right: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+a,
+.navIcon{
+  color: #10d3eb;
+}
+
+
+.logo{
+  height: 100%;
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.logoImg{
+  height: 55%;
+  width: auto;
+}
+
+
+.header{
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+.nav{
+  height: 100%;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.logInDiv,
+form{
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 28%;
+  gap: 5px;
+}
+
+
+.logInImgImg{
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/images.jpeg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+
+input{
+  height: 13%;
+  width: 80%;
+  background-color: rgb(248, 248, 248);
+  border: 2px solid transparent;
+  outline: none;
+}
+
+
+input:focus{
+  border-color: transparent;
+}
+
+
+button{
+  width: 81%;
+  height: 13%;
+  background-color: #B0E0E6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
+.bannerSection{
+  height: 100%;
+  width: 100%;
+}
+
+
+.banner{
+  width: 100%;
+  height: 600px;
+  background-image: url("./images/pexels-trvlust-3369569.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.post{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1%;
+  text-align: center;
+}
+
+
+.gradientText{
+  font-size: 30px;
+  margin-top: 3%;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00c6ff, #0072ff); /* ცისფერი გრადიენტი */
+  /* -webkit-background-clip: text; */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.postDiv{
+  height: 40%;
+  border: 1px solid #B0E0E6;
+  flex-basis: calc(30% - 5%);
+  box-sizing: border-box;
+  padding: 5%;
+  border-radius: 5%;
+}
+
+
+.post a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #10d3eb;
+}
+
+
+.singlePostContent p,
+.postDiv p{
+  max-height: 90%;
+  overflow: hidden; 
+  text-overflow: ellipsis;   
+  word-wrap: break-word;      
+  white-space: normal;        
+  max-width: 100%;            
+}
+
+.singlePostContainer{
+  height: calc(100vh - 20vh);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.singlePostContent{
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.singlePostContent h2{
+  color: #10d3eb;
+}
+
+.singlePostContent p{
+  color: #333;
+  text-align: center;
+}
+
+.backLink{
+  display: inline-block;
+  color: #10d3eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.backLink:hover{
+  text-decoration: underline;
+}
+
+.footer{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.heading{
+  font-size: 2.5rem;
+  color: #d9534f,
+}
+  
+.button{
+  background-color: #89d7e1;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 400px){
+  .singlePostContent{
+    width: 90%;
+    height: 90%;
+  }
+}
