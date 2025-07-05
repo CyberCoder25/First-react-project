@@ -14,7 +14,7 @@ function AppContent(){
   if (!user) {
     return (
  <>
-        <Header />
+        <Header/>
         <Routes>
           <Route path="/" element={<Login/>} />
           <Route path="*" element={<Notfound/>} />

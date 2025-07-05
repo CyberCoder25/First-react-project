@@ -6,11 +6,11 @@ function Notfound() {
   const {user}=useAuth()
 
   return (
-    <div style={{ flexDirection: "column" }}
-className="container">
-      <h4 className='heading'>Not Found</h4>
+    <div
+className="container notFound">
+      <h4 className='notFoundH'>Not Found</h4>
       {/* es ar mushaobs :( */}
-      <Link to={user?"/home":"/"} className='button'>
+      <Link to={user ? "/home" :"/"} className='notFoundButton'>
         Go back
       </Link>
     </div>

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import logo from '../images/React_logo_wordmark.png'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 function Header() {
   const {user}=useAuth()
@@ -22,12 +22,12 @@ function Header() {
           </>
         ) : (
           <>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="navIcon">
-              <FaFacebookF/>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="navIcon">
-              <FaInstagram/>
-            </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram/>
+          </a>
+          <a href="https://www.linkedin.com/in/tamta-khutsishvili-85395b343/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedinIn/>
+          </a>
           </>
         )}
       </nav>

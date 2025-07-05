@@ -23,7 +23,7 @@ function Home() {
            // posts.map-is gareshec ganvixile.
            posts.slice(0, 6).map((element) => (
            <div className='postDiv' key={element.id}>
-            {/* asoebad davyvai */}
+            {/* asoebad davyavi */}
              <Link to={`/posts/${element.id}`}>{element.title.length > 20 ? element.title.slice(0, 5) : element.title}</Link>
              {/* sityvebad davyavi */}
              <p>{element.body.split(" ").length > 7 ? element.body.split(" ").slice(0, 15).join(" ") : element.body}</p>
